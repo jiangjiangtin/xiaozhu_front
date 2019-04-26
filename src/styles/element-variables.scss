@@ -1,0 +1,239 @@
+/* 改变主题色变量 */
+$--color-primary: #ffaec8;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import 'element-ui/lib/theme-chalk/display.css';
+@import "~element-ui/packages/theme-chalk/src/index";
+
+@import './mixin.scss';
+
+/* element-ui 样式重置 */
+.el-message {
+  top: 100px;
+}
+#app {
+  .batch-set-price-info-dialog-content {
+    .el-date-editor.el-input__inner {
+      width: 220px;
+    }
+    .el-date-editor .el-range-separator {
+      width: 10%!important;
+    }
+    .el-checkbox__label {
+      padding-left: 4px;
+    }
+  }
+
+  .el-table {
+    color: black;
+  }
+  .el-form-item__label {
+    color: black;
+  }
+  // 重置所有表单item
+  .el-form-item {
+    margin-bottom: 16px;
+  }
+  // 导航栏
+  .nav-wrapper {
+    .el-menu--horizontal .el-menu-item {
+      padding: 0 10px;
+      color: #333333;
+      border-bottom: 3px solid transparent;
+
+      .el-submenu__title {
+        color: #333333;
+      }
+
+      &.is-active {
+        color: $primary-color;
+      }
+
+      &:hover {
+        border-bottom-color: $primary-color;
+      }
+    }
+
+    .el-submenu__title {
+      padding: 0 10px!important;
+    }
+
+    .el-submenu {
+      .el-menu-item {
+        padding: 0 10px;
+      }
+    }
+
+    .el-menu--horizontal > .el-menu-item:hover, .el-menu--horizontal > .el-submenu:hover .el-submenu__title, .el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
+      border-bottom: 3px solid $primary-color;
+    }
+  }
+
+  // 表单
+  .login-wrapper, .register-wrapper, .forget-pwd, .modify-info {
+    .el-tabs__header {
+      border-bottom: 2px solid $light-border-color;
+
+      .el-tabs__nav {
+        float: none;
+        width: 100%;
+
+        .el-tabs__active-bar {
+          width: 50%;
+          background-color: $primary-color;
+        }
+
+        .el-tabs__item {
+          width: 50%;
+          color: #333;
+          text-align: center;
+
+          &:active {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .el-input {
+      &.is-disabled {
+        .el-input__inner {
+          background-color: #fff;
+        }
+      }
+
+      .el-input__inner {
+        padding-left: 24px;
+        border: none;
+        border-bottom: 1px solid $light-border-color;
+        border-radius: 0;
+
+        &[type='password'] {
+          padding-right: 62px;
+        }
+
+        &:focus {
+          border-bottom: 1px solid $primary-color;
+        }
+      }
+    }
+  }
+
+// reset input disable
+  .el-input {
+    &.is-disabled {
+      .el-input__inner {
+        color: black;
+      }
+    }
+  }
+
+// reset textarea disable
+  .el-textarea {
+    &.is-disabled {
+      .el-textarea__inner {
+        color: black;
+      }
+    }
+  }
+
+  // 注册
+  .register-wrapper, .modify-info {
+    .el-tabs__active-bar {
+      width: 100% !important;
+    }
+
+    .el-tabs__item {
+      width: 100%!important;
+
+      &.is-active {
+        color: #333;
+      }
+    }
+  }
+
+  // 忘记密码
+  .forget-pwd {
+    .el-input__inner {
+      padding-left: 0;
+    }
+  }
+
+  // 修改资料
+  .modify-info {
+    .el-form-item {
+      position: relative;
+
+      .el-form-item__label {
+        position: relative;
+        z-index: 10;
+      }
+
+      .el-date-editor {
+        width: 377px;
+      }
+    }
+
+    .modifyForm {
+      .el-input__inner {
+        padding-left: 0;
+      }
+    }
+  }
+
+  // 分页
+  .el-pagination {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    button {
+      i {
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      &.disabled {
+        i {
+          color: #dadada;
+        }
+      }
+    }
+  }
+
+  // 轮播
+  .el-carousel {
+    .el-carousel__arrow {
+      background-color: $primary-color;
+      opacity: .8;
+
+      i {
+        color: #fff;
+      }
+    }
+
+    .el-carousel__indicators {
+      right: 10px;
+      left: initial;
+      transform: translateX(0);
+
+      .el-carousel__button {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+body {
+  @media screen and (max-width: 767px) {
+    // 消息提示框
+    .el-message-box {
+      max-width: 420px;
+      width: initial;
+    }
+  }
+}
