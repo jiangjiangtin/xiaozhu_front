@@ -1,8 +1,8 @@
 <template>
-  <div class="header-info">
+  <div id="header-info">
     <div class="container">
       <div class="head clearfix">
-        <p class="fl invalid-text text-small">吼吼~小猪钱钱来了</p>
+        <p class="fl invalid-text text-small">吼吼~小猪钱钱后台管理</p>
         <a href="http://www.baidu.com" target="blank" class="fl invalid-text text-pd text-small">我的小猪</a>
         <a href="http://www.baidu.com" target="blank" class="fr invalid-text text-small text-pd">抢手券</a>
       </div>
@@ -54,7 +54,7 @@ export default {
 @import '../../styles/common.scss';
 @import '../../styles/mixin.scss';
 
-.header-info {
+#header-info {
   position: fixed;
   width: 100%;
   height: 40px;

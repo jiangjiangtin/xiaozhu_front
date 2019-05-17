@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueI18n from 'vue-i18n'
 import '@/styles/element-variables.scss'
 
 import {
@@ -138,6 +139,8 @@ Vue.use(Header)
 Vue.use(Aside)
 Vue.use(Main)
 Vue.use(Footer)
+
+Vue.use(VueI18n)
 
 Vue.use(Loading.directive)
 

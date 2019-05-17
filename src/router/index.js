@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import withdrawManageRouter from './withdrawManageRouter'
 
 Vue.use(Router)
 const Parent = () => import('../components/common/parent')
@@ -19,7 +20,8 @@ const router = new Router({
           component: () => import('../components/pages/ticket')
         }
       ]
-    }
+    },
+    withdrawManageRouter
   ]
 })
 

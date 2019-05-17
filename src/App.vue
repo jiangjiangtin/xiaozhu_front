@@ -3,7 +3,9 @@
     <Head/>
     <div class="main-content">
       <transition name="fade" mode="out-in">
-        <Parent/>
+        <Parent>
+          <router-view></router-view>
+        </Parent>
       </transition>
     </div>
   </div>
@@ -23,6 +25,8 @@ export default {
 </script>
 
 <style lang="scss" scope>
+@import './styles/common.scss';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
