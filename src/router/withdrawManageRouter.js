@@ -11,6 +11,14 @@ const withdrawManageRouter = {
         name: '可提现余额管理'
       },
       component: () => import('../components/pages/withdrawManage/enableBalanceManage')
+    },
+    {
+      path: 'tzfe',
+      name: 'tzfe',
+      meta: {
+        name: '2048'
+      },
+      component: () => import('../components/pages/tzfe/tzfe')
     }
   ]
 }
