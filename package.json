@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "element-ui": "^2.7.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "stylus": "^0.54.5",
     "vue": "^2.5.2",
     "vue-i18n": "^8.11.2",
